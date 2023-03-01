@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOCK</title>
+    <style>
+        body{
+            margin:0;
+        }
+        h1{
+            padding: 16px;
+            margin: 0;
+            color:white
+        }
+
+        .nav{
+            margin-top: 0;
+            background-color: black;
+            color:white;
+            font-family: "Roboto",sans-serif;
+            font-weight:600;
+            padding: 16px;
+            position:sticky;
+            top: 0;
+            z-index: 16;
+        }
+
+        img{
+            width:450px;
+            height:300px;
+            border: 2px solid rgb(242, 244, 245);
+            border-radius: 8px;
+        }
+
+        .gallery{
+            display:inline-block;
+            background-color: rgb(41, 33, 33);
+            text-align: center;
+            margin-left:0%;
+            width: 100%;
+        }
+
+        .collection{
+            display: inline-block;
+            width:450px;
+            height:300px;
+            border:1px solid white;
+            border-radius: 8px;
+            background-color: rgb(250, 250, 249);
+            margin-right: 14px;
+            margin-bottom: 14px;
+            margin-left: 0;
+            
+        }
+
+        img:hover{
+            background-color: rgb(104, 184, 184);
+            border-color: wheat;
+            cursor: pointer;
+            position: relative;
+            top:10px;
+            left:10px;
+        }
+
+        .logo{
+            display: inline;
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-right: 56%;
+            margin-left: 5px;
+            color: red;
+        }
+
+        span{
+            position: relative;
+            top:-5px;
+            margin-left: 18px;
+            padding: 10px;
+            width:5px;
+            height:5px;
+        }
+
+        span:hover{
+            border-radius: 5px;
+            background-color: white;
+            color:black;
+            cursor: pointer;
+        }
+       
+        i{
+            font-size: 25px;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        i:hover{
+            cursor: pointer;
+            font-size: 26px;
+        }
+
+        .side-nav{
+            border: 2px solid black;
+            position:relative;
+            visibility:hidden;
+            display: inline-block;
+            width:25%;
+            height: 650px;
+            border-top: none;
+            border-left: none;
+            background-color: rgb(11, 11, 10);
+            color: #f4f0f0;
+            font-size: 16px;
+            text-align: center;
+            font-family: 'Roboto',sans-serif;
+            position: fixed;
+            top: 65px;
+        }
+
+        #darker{
+            display: none;
+        }
+
+        #close{
+            position: absolute;
+            right:0;
+            top: 0;
+        }
+
+        #pic{
+            border-radius: 50%;
+            width: 25%;
+            height: 25%;
+        }
+
+        #pic:hover{
+            position: static;
+        }
+
+        #profile{
+            margin-top:40px;
+        }
+
+        figcaption{
+            margin-top: 10px;
+        }
+        
+
+        .procons{
+            margin-top: 48px;
+            position:absolute;
+            left:0;
+        }
+
+        .procon{
+            padding-top: 19px;
+            padding-bottom: 15px;
+            padding-left: 35px;
+            display:block;
+            text-align: justify;
+            margin-bottom: 10px;
+            margin-left: 0;
+            width:335px;
+            height: 30px;
+        }
+
+
+
+
+
+
+
+    </style>
+    <script src="https://kit.fontawesome.com/9bb6241c8c.js" crossorigin="anonymous"></script>
+    <script>
+        function navi(){
+            var menu=document.getElementById("g");
+            var snav=document.getElementById("sn");
+            menu.style.marginLeft="25%";
+            menu.style.width="75%";
+            snav.style.display="block";
+            snav.style.visibility="visible";
+
+        }
+        function navic(){
+            var menu=document.getElementById("g");
+            var snav=document.getElementById("sn");
+            menu.style.width="100%";
+            menu.style.marginLeft="0%";
+            snav.style.display="none";
+        }
+
+        function light(){
+            var menu=document.getElementById("g");
+            menu.style.backgroundColor="#f4f0f0";
+            var text=document.getElementsByTagName("h1")[0];
+            text.style.color="black";
+            var navc=document.getElementsByClassName("nav")[0];
+            navc.style.backgroundColor="#073be8";
+            navc.style.color="white";
+            var themer1=document.getElementById("lighter");
+            themer1.style.display="none";
+            var themer2=document.getElementById("darker");
+            themer2.style.display="inline-block";
+            var sidenav=document.getElementById("sn");
+            sidenav.style.backgroundColor="rgb(153, 209, 244)";
+            sidenav.style.color="black";
+            var coll=document.getElementsByClassName("collection")
+            for(let i=0;i<coll.length;i++){
+                coll[i].style.backgroundColor="black";
+            }
+        }
+
+            function dark(){
+                var menu=document.getElementById("g");
+                menu.style.backgroundColor="rgb(41, 33, 33)";
+                var text=document.getElementsByTagName("h1")[0];
+                text.style.color="white";
+                var navc=document.getElementsByClassName("nav")[0];
+                navc.style.backgroundColor="black";
+                navc.style.color="white";
+                var themer1=document.getElementById("lighter");
+                themer1.style.display="inline-block";
+                var themer2=document.getElementById("darker");
+                themer2.style.display="none";
+                var sidenav=document.getElementById("sn");
+                sidenav.style.backgroundColor="black";
+                sidenav.style.color="white";
+                var coll=document.getElementsByClassName("collection")
+                for(let i=0;i<coll.length;i++){
+                    coll[i].style.backgroundColor="white";
+                }
+            }
+            
+
+    </script>
+</head>
+<body>
+    <div class="nav">
+        <i class="fa-solid fa-bars" onpointerover="navi()" onpointerup="navic()"></i>
+        <div class="logo"><i class="fa-solid fa-gamepad"></i>GameZone</div>
+        <span>HOME</span>
+        <span>GALLERY</span>
+        <span>CONTACT</span>
+        <i id="lighter" class="fa-regular fa-sun" onmouseup ="light()"></i>
+        <i id="darker" class="fa-solid fa-moon" onmouseup ="dark()"></i>
+    </div>
+    <div class="main-side">
+        <div class="side-nav" id="sn">
+            <i id="close" class="fa-solid fa-xmark" onpointerup="navic()"></i>
+            <div id="profile">
+                <figure>
+                    <img id="pic" src="./images/profile.png" alt="">
+                    <figcaption> Welcome back, Gamer!</figcaption>
+                </figure>
+            </div>
+            <div class="procons">
+                <span class="procon"><i class="fa-regular fa-id-card"></i>Profile</span>
+                <span class="procon"><i class="fa-solid fa-gamepad"></i>My Games</span>
+                <span class="procon"><i class="fa-solid fa-wallet"></i>Wallet</span>
+                <span class="procon"><i class="fa-solid fa-cart-shopping"></i>Cart</span>
+                <span class="procon"><i class="fa-solid fa-gift"></i>Gift to Friend</span>
+                <span class="procon"><i class="fa-solid fa-right-from-bracket"></i>SignOut</span>
+            </div>
+        </div>
+    
+    <div class="gallery" id="g">
+        <h1>Revengers Re-Assemble</h1>
+        <div class="collection">
+            <img src="./images/glow.jpg" alt="">
+        </div>
+        <div class="collection">
+            <img src="./images/gow.jpg" alt="">
+        </div>
+        <div class="collection">
+            <img src="./images/gow2.jpg" alt="">
+        </div>
+        <div class="collection">
+            <img src="./images/gow3.png" alt="">
+        </div>
+        <div class="collection">
+            <img src="./images/lava.jpg" alt="">
+        </div>
+        <div class="collection">
+            <img src="./images/msidr.jpg" alt="">
+        </div>
+        <div class="collection">
+            <img src="./images/msiglow.jpg" alt="">
+        </div>
+        <div class="collection">
+            <img src="./images/nice.jpg" alt="">
+        </div>
+        <div class="collection">
+            <img src="./images/ph10.jpg" alt="">
+        </div>
+        <div class="collection">
+            <img src="./images/ph11.jpg" alt="">
+        </div>
+        <div class="collection">
+            <img src="./images/ph12.jpg" alt="">
+        </div>
+        <div class="collection">
+            <img src="./images/ph13.jpg" alt="">
+        </div>
+        <div class="collection">
+            <img src="./images/ph14.jpg" alt="">
+        </div>
+        <div class="collection">
+            <img src="./images/ph15.jpg" alt="">
+        </div>
+        <div class="collection">
+            <img src="./images/ph16.jpg" alt="">
+        </div>
+        <div class="collection">
+            <img src="./images/ph17.jpg" alt="">
+        </div>
+        <div class="collection">
+            <img src="./images/ph18.jpg" alt="">
+        </div>
+        <div class="collection">
+            <img src="./images/ph19.jpg" alt="">
+        </div>
+        <div class="collection">
+            <img src="./images/ph20.jpg" alt="">
+        </div>
+        <div class="collection">
+            <img src="./images/ph2.jpg" alt="">
+        </div>
+        <div class="collection">
+            <img src="./images/ph3.png" alt="">
+        </div>
+        <div class="collection">
+            <img src="./images/ph4.jpg" alt="">
+        </div>
+        <div class="collection">
+            <img src="./images/ph5.jpg" alt="">
+        </div>
+        <div class="collection">
+            <img src="./images/ph6.jpg" alt="">
+        </div>
+    </div>
+    
+</div>
+</body>
+</html>
